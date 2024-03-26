@@ -1,0 +1,1 @@
+This reads standard stdin
