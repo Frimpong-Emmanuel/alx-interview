@@ -20,12 +20,12 @@ if __name__ == "__main__":
     regex = re.compile(
     r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} - \[\d{4}-\d{2]-\d{2} \d{2}:\d{2}:\d{2}.\d+\] "GET /projects/260 HTTP/1.1"(.{3} (\d+)') #nopep8
 
-line_count = 0
-log = {}
-log["file_size"] = 0
-log["code_frequency"] = {
-    str(code): 0 for code in [
-        200, 301, 400, 401, 403, 404, 405, 500]}
+    line_count = 0
+    log = {}
+    log["file_size"] = 0
+    log["code_frequency"] = {
+        str(code): 0 for code in [
+            200, 301, 400, 401, 403, 404, 405, 500]}
 
 
     try:
@@ -48,5 +48,5 @@ log["code_frequency"] = {
                 if (line_count % 10 == 0):
                 output(log)
 
-finally:
-    output(log)
+    finally:
+        output(log)
