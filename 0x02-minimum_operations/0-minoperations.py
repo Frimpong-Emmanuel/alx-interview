@@ -12,12 +12,12 @@ def minOperations(n: int) -> int:
     body = 'H'
     op = 0
     while (len(body) < n):
-        if n% len(body) == 0:
+        if n % len(body) == 0:
             op += 2
             next = body
             body += body
         else:
-            op += 1 
+            op += 1
             body += next
     if len(body) != n:
         return 0
